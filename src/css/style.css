@@ -1,0 +1,121 @@
+* {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  text-decoration: none;
+  box-sizing: border-box;
+}
+
+html,
+body,
+.wrap {
+  width: 100%;
+  height: 100%;
+}
+
+.wrap {
+  font-size: .32rem;
+  display: flex;
+  flex-direction: column;
+}
+
+header {
+  width: 100%;
+  height: .88rem;
+  background: #C4493C;
+  display: flex;
+  align-items: center;
+  padding: 0 .12rem;
+}
+
+header i.icon2 {
+  font-size: .5rem;
+  color: #fff;
+  margin-right: .1rem;
+}
+
+header span img {
+  width: .5rem;
+  height: .5rem;
+  display: block;
+  margin-left: .1rem;
+}
+
+header .input {
+  flex: 1;
+  position: relative;
+}
+
+header .input i.icon {
+  position: absolute;
+  left: .2rem;
+  top: .16rem;
+}
+
+header .input input {
+  width: 100%;
+  height: .66rem;
+  border: 0;
+  border-radius: .3rem;
+  padding-left: .5rem;
+  outline: none;
+}
+
+.nav {
+  width: 100%;
+  height: .6rem;
+  display: flex;
+}
+
+.nav li {
+  flex: 1;
+  text-align: center;
+  line-height: .6rem;
+}
+
+.nav li.active span {
+  border-bottom: 1px solid #f00;
+}
+
+.list {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: .36rem;
+}
+
+.list span {
+  width: 25%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.list span a {
+  color: #333;
+  line-height: 2;
+}
+
+.list span img {
+  width: 1.2rem;
+  height: 1.2rem;
+}
+
+section {
+  flex: 1;
+  overflow-y: auto;
+}
+
+.parent {
+  width: 100%;
+  height: 2.94rem;
+}
+
+.parent img {
+  width: 100%;
+  height: 100%;
+}
+/*# sourceMappingURL=style.css.map */

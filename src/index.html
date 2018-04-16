@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name='viewport' content='width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no' />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge;chorme=1">
+    <title>Document</title>
+    <script>
+        document.documentElement.style.fontSize = window.innerWidth / 750 * 100 + 'px';
+    </script>
+    <link rel="stylesheet" href="swiper/swiper-3.4.2.min.css">
+    <link rel="stylesheet" href="fonts2/iconfont.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div class="wrap">
+        <header>
+            <span><i class="icon2 iconfont icon-yuyin"></i></span>
+            <div class="input">
+                <input type="text" placeholder="给你推荐  菩提葛">
+                <i class="icon iconfont icon-fangdajing"></i>
+            </div>
+            <span> <img src="imgs/yinyue.png" alt=""></span>
+        </header>
+        <ul class="nav">
+            <li><span>音乐</span></li>
+            <li><span>视频</span></li>
+            <li><span>电台</span></li>
+        </ul>
+        <section>
+            <div class="swiper-container parent">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <img src="imgs/bg.png" alt="">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="imgs/bg.png" alt="">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="imgs/bg.png" alt="">
+                    </div>
+                </div>
+                <div class="swiper-pagination pag"></div>
+            </div>
+            <div class="list">
+                <span>
+                    <img src="imgs/pic1.png" alt="">
+                    <a href="javascript:;">私人MV</a>
+                </span>
+                <span>
+                  <img src="imgs/pic2.png" alt="">
+                  <a href="javascript:;">每日推荐</a>
+                </span>
+                <span>
+                    <img src="imgs/pic3.png" alt="">
+                    <a href="javascript:;">歌单</a>
+                </span>
+                <span>
+                    <img src="imgs/pic4.png" alt="">
+                    <a href="javascript:;">排行榜</a>
+                </span>
+            </div>
+            <div class="text">
+                <span>推荐歌单</span>
+                <i class="icon iconfont icon-xiangyou"></i>
+            </div>
+        </section>
+        <footer></footer>
+    </div>
+
+</body>
+<script src="swiper/swiper-3.4.2.min.js"></script>
+<script src="js/jQuery.js"></script>
+<script>
+    new Swiper('.parent', {
+        loop: true,
+        pagination: '.pag'
+    })
+    $.ajax({
+        url: '/list',
+        type: 'GET',
+        dataType: 'json',
+        success: function(json) {
+            getHtml(json.list);
+        },
+        error: function(error) {
+            console.log(error);
+        }
+    })
+
+    function getHtml(list) {
+        list.map(function(v, i) {
+            console.log(v);
+
+        })
+    }
+</script>
+
+</html>
